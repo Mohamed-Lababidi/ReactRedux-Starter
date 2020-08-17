@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react'
 
 class SearchBar extends Component {
  constructor(props){
@@ -8,14 +8,22 @@ class SearchBar extends Component {
   render() {
     return ( 
         <div className="row">
-            <div className="col-md-8">
-            <input type="text" className="form-control input-lg" onChange={this.handleChange.bind(this)} placeholder={this.state.placeholder}/>
+            <div className="col-lg-8 input-group">
+                <input onKeyUp={this.handleChange.bind(this)} type="text" className="form-control input-lg" placeholder={this.state.placeholder} />
+                <span className="input-group-btn">
+                    <button className="btn btn-secondary" onClick={this.handleOnClick.bind(this)}>Go</button>
+                </span>
             </div>
         </div>
     )
 }
-    handleChange (event) {
+    handleChange(event){
         this.setState({searchText:event.target.value});
     }
+
+    handleOnClick(event){
+        console.log('click');
+    }
+
 }
 export default SearchBar;
