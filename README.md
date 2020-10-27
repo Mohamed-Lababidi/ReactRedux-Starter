@@ -1,9 +1,3 @@
 ### ReactRedux-Starter ###
 
-Pour installer le projet se placer dans le projet et lancer : 
-
-```
-> npm install
-> npm start
-```
-
+## Petit projet pour afficher une Todo-List avec l'aide de redux.
